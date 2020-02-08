@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background: #1a73e9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    color: white;
+}
+.logo {
+    font-family: 'Sriracha', cursive;
+    font-size: 25px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    margin: 0 50px 0 50px;
+}
+.links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.burger {
+    display: none;
+}
+nav button {
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    nav button {
+        display: block;
+        margin-left: 70%;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 50px;
+    }
+    .links {
+        background: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        display: block;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        align-items: center;
+    }
+    a {
+        font-size: 20px;
+    }
+    .links li {
+        margin: 10vh auto 0 100px;
+    }
+    .burger {
+        display: block;
+    }
+    .burger:hover {
+        cursor: pointer;
+    }
+    .burger div {
+        background: white;
+        width: 50px;
+        height: 5px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+}
