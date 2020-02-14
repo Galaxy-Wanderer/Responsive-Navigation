@@ -7,16 +7,18 @@
     text-align: center;
 }
 nav {
-    background: #1a73e9;
+    z-index: 1000;
+    background: #0c7bca;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 10%;
     color: white;
+    box-shadow: 0px 10px 10px black;
 }
 .logo {
     font-family: 'Sriracha', cursive;
-    font-size: 25px;
+    font-size: calc(3vh + 5px);
 }
 a {
     text-decoration: none;
@@ -33,7 +35,31 @@ a {
 .burger {
     display: none;
 }
-
+.hero {
+    background: url(./DNA.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sriracha', cursive;
+    color: white;
+}
+.hero h1 {
+    font-size: 50px;
+    text-shadow: 3px 3px gray;
+}
+button {
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+    padding: 15px 50px 15px 50px;
+    color: white;
+    font-size: 35px;
+    font-family: 'Roboto Slab', sans-serif;
+}
 @media screen and (max-width: 1250px) {
     .links {
         background: rgba(0, 0, 0, 0.7);
@@ -63,18 +89,18 @@ a {
     .burger div {
         background: white;
         width: 35px;
-        height: 5px;
+        height: 4px;
         margin: 5px;
         border-radius: 5px;
         transition: 0.5s ease;
     }
     .links-active ~ .burger div:nth-child(1) {
-        transform: rotate(45deg) translate(15px, 7px);
+        transform: rotate(45deg) translate(13px, 6px);
     }
     .links-active ~ .burger div:nth-child(2) {
         opacity: 0;
     }
     .links-active ~ .burger div:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, 0px);
+        transform: rotate(-45deg) translate(6px, 0px);
     }
 }
